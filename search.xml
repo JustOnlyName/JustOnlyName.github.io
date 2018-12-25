@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[更新博客搭建_theme]]></title>
+    <url>%2F2018%2F12%2F23%2F%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA_theme%2F</url>
+    <content type="text"><![CDATA[更新博客搭建 &emsp;作为一名在hexo方面赤果果的新手，我在博文写作方面遇到了很多问题，故特意将这些错误及其解决方案记录下来，以便日后查证之用，同时，也可给各位在遇到类似问题时提供一点参考。 Theme—Next &emsp;这个主题会有两个不是一个路径下的config文件需要更改，一个是在hexo的blog的root目录下，一个是在之后下载来的theme相关路径下的config文件 第一个是在站点根目录下，其中包含Hexo的配置 第二个是在主题根目录下，由NexT提供并包含主题的配置 1. 下载NextTheme 进入hexo的blog文件夹 git clone https://github.com/theme-next/hexo-theme-next themes/next 此处可以不用clone，可以直接进入网址下载文件，再复制粘贴到指定文件夹下（个人感觉这样速度快一些） 2. 更改config文件 Ctrl+F查找theme，enable:true theme的大的外观时由scheme控制，可更换其他样式 3. 测试效果 这样就已经安装并使用了next主题，但并没有想其他人的网站博客那样的个性化，接下来进行一下更多设置。 发布一篇新文章首先Ctrl+C停止当前的本地服务，然后 hexo n “我的第一篇文章Test”这样就会在博客目录下source_posts中生成相应的“Test.md”文件，之后编辑markdown文件就行 至于为何会出现一个Test文件夹，之后再了解]]></content>
+      <categories>
+        <category>Hexo博客搭建</category>
+      </categories>
+      <tags>
+        <tag>theme</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F12%2F15%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
