@@ -14,8 +14,8 @@
 
 <script>
     (function () {
-        if ('123') {
-            if (prompt('请输入文章密码') !== '123') {
+        if ('ctf.org') {
+            if (prompt('请输入文章密码') !== 'ctf.org') {
                 alert('密码错误！');
                 if (history.length === 1) {
                     location.replace("https://JustOnlyName.github.io"); // 这里替换成你的首页
@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Hello,">
+  <meta name="keywords" content="CTF,">
 
 
 
@@ -93,18 +93,20 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
-<meta name="keywords" content="Hello">
+<meta name="description" content="1. sql宽字节注入url转码   空格 %20     ‘ %27   # %23   \ %5C    利用MySQL的一个特性，MySQL使用GBK编码的时候，会认为两个字符时一个汉字（前一个ascii码要大于128，才到汉字的范围） &amp;emsp;’     &amp;emsp;-&amp;gt;     &amp;emsp;&amp;emsp;\’&amp;emsp;&amp;emsp;        -&amp;gt;      %5C%2">
+<meta name="keywords" content="CTF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/12/15/hello-world/index.html">
+<meta property="og:title" content="edu.aqniu笔记">
+<meta property="og:url" content="http://yoursite.com/2019/02/18/CTF笔记/index.html">
 <meta property="og:site_name" content="Just的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta property="og:description" content="1. sql宽字节注入url转码   空格 %20     ‘ %27   # %23   \ %5C    利用MySQL的一个特性，MySQL使用GBK编码的时候，会认为两个字符时一个汉字（前一个ascii码要大于128，才到汉字的范围） &amp;emsp;’     &amp;emsp;-&amp;gt;     &amp;emsp;&amp;emsp;\’&amp;emsp;&amp;emsp;        -&amp;gt;      %5C%2">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-12-25T11:47:53.307Z">
+<meta property="og:image" content="https://i.imgur.com/dbWqvwN.png">
+<meta property="og:updated_time" content="2019-02-25T15:35:51.344Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.">
+<meta name="twitter:title" content="edu.aqniu笔记">
+<meta name="twitter:description" content="1. sql宽字节注入url转码   空格 %20     ‘ %27   # %23   \ %5C    利用MySQL的一个特性，MySQL使用GBK编码的时候，会认为两个字符时一个汉字（前一个ascii码要大于128，才到汉字的范围） &amp;emsp;’     &amp;emsp;-&amp;gt;     &amp;emsp;&amp;emsp;\’&amp;emsp;&amp;emsp;        -&amp;gt;      %5C%2">
+<meta name="twitter:image" content="https://i.imgur.com/dbWqvwN.png">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/15/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/18/CTF笔记/">
 
 
 
 
 
-  <title>Hello World | Just的博客</title>
+  <title>edu.aqniu笔记 | Just的博客</title>
   
 
 
@@ -290,7 +292,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/15/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/18/CTF笔记/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="www路">
@@ -307,7 +309,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">edu.aqniu笔记</h1>
         
 
         <div class="post-meta">
@@ -319,8 +321,8 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-15T11:00:18+08:00">
-                2018-12-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-18T22:02:15+08:00">
+                2019-02-18
               </time>
             
 
@@ -329,28 +331,6 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hello/" itemprop="url" rel="index">
-                    <span itemprop="name">Hello</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -378,7 +358,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
                 </span>
                 
                 <span title="Words count in article">
-                  73
+                  549
                 </span>
               
 
@@ -392,7 +372,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
                 </span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -413,15 +393,73 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br><a id="more"></a></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="1-sql宽字节注入"><a href="#1-sql宽字节注入" class="headerlink" title="1. sql宽字节注入"></a>1. sql宽字节注入</h1><h2 id="url转码"><a href="#url转码" class="headerlink" title="url转码"></a>url转码</h2><table>
+<thead>
+<tr>
+<th>空格</th>
+<th>%20</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>‘</td>
+<td>%27</td>
+</tr>
+<tr>
+<td>#</td>
+<td>%23</td>
+</tr>
+<tr>
+<td>\</td>
+<td>%5C</td>
+</tr>
+</tbody>
+</table>
+<p>利用MySQL的一个特性，MySQL使用GBK编码的时候，会认为两个字符时一个汉字（前一个ascii码要大于128，才到汉字的范围）</p>
+<p><strong>&emsp;’     &emsp;-&gt;     &emsp;&emsp;\’&emsp;&emsp;        -&gt;      %5C%27</strong><br><strong>%df ‘    -&gt; &emsp;%df\’ &emsp;    -&gt;    <font color="red">%df%5C</font>%27</strong><br>此处的单引号变为%27逃逸</p>
+<h2 id="基于约束的sql攻击"><a href="#基于约束的sql攻击" class="headerlink" title="基于约束的sql攻击"></a>基于约束的sql攻击</h2><h1 id="2-kali-持久加密USB安装"><a href="#2-kali-持久加密USB安装" class="headerlink" title="2. kali 持久加密USB安装"></a>2. kali 持久加密USB安装</h1><ol>
+<li>将kali镜像iso文件复制到虚拟机当中（通过共享文件夹从物理主机传到虚拟机）</li>
+<li>插入U盘<blockquote>
+<p>命令    <code>dmesg</code> 显示U盘类型【sdb】系统写入的日志</p>
+</blockquote>
+</li>
+</ol>
+<h5 id="1-将镜像文件刻录到U盘，制作usb的live启动盘"><a href="#1-将镜像文件刻录到U盘，制作usb的live启动盘" class="headerlink" title="1. 将镜像文件刻录到U盘，制作usb的live启动盘"></a>1. 将镜像文件刻录到U盘，制作usb的live启动盘</h5><h5 id="2-划分剩余分区，用于后续加密"><a href="#2-划分剩余分区，用于后续加密" class="headerlink" title="2. 划分剩余分区，用于后续加密"></a>2. 划分剩余分区，用于后续加密</h5><ul>
+<li><code>dd if=kali-linux-...-amd64.iso of=/dev/sdb(此处的sdb是根据所插入的存储设备的类型） bs=1M</code></li>
+<li><code>parted</code>命令行磁盘分区</li>
+<li><code>print devices</code>显示现在挂载的硬盘</li>
+<li><code>select /dev/sdb</code>选中磁盘在此操作</li>
+<li><img src="https://i.imgur.com/dbWqvwN.png" alt=""></li>
+<li><code>mkpart primary ** **</code>手动进行分区</li>
+</ul>
+<h5 id="3-使用luks对分区进行加密"><a href="#3-使用luks对分区进行加密" class="headerlink" title="3. 使用luks对分区进行加密"></a>3. 使用luks对分区进行加密</h5><blockquote>
+<p>luks加密分前端和后端加密</p>
+</blockquote>
+<ul>
+<li><code>cryptsetup --verbose --verify-passphrase luksFormat /dev/sdb3(u盘中的第3分区）</code></li>
+<li><code>cryptsetup luksOpen /dev/sdb3 usb(需要给一个挂载的名称，会在/dev/mapper/usb生成文件)</code>打开加密的分区来进行写入</li>
+<li><code>ls /dev/mapper/usb</code></li>
+<li><code>mkfs ext3(ext4) /dev/mapper/usb</code>格式化磁盘分区</li>
+<li><code>e2label /dev/mapper/usb persistence</code>设置卷标（必须用persistence）</li>
+<li><code>mkdir /mnt/usb/</code>新创建一个目录</li>
+<li><code>mount /dev/mapper/usb /mnt/usb</code>相当于连接目录</li>
+<li><code>echo &quot;/ union&quot; &gt; /mnt/usb/persistence.conf</code></li>
+<li><code>umount /dev/mapper/usb</code>将挂载的文件卸载掉</li>
+<li><code>cryptsetup luksClose /dev/mapper/usb</code>完成持久加密的usb</li>
+</ul>
+<h1 id="3-熟悉Linux环境"><a href="#3-熟悉Linux环境" class="headerlink" title="3. 熟悉Linux环境"></a>3. 熟悉Linux环境</h1><ul>
+<li><code>gnome-tweak-tool</code>字体调整，在terminal界面命令行</li>
+<li><code>clear</code>将命令行界面清空</li>
+<li><code>apt-get install netspeed</code>网络流量监视，1.安装包……2.添加到工具栏，点alt键在工具栏一行点右键，添加到面板</li>
+</ul>
+<blockquote>
+<p><code>apt-get</code>命令 安装官方软件常用命令</p>
+</blockquote>
+<h1 id="4-熟悉BASH命令"><a href="#4-熟悉BASH命令" class="headerlink" title="4. 熟悉BASH命令"></a>4. 熟悉BASH命令</h1><blockquote>
+<p>ls、cd、pwd、cat、more、tail、cp、rm、top、ps、grep、ifconfig、netstat、awk、sort、route、mount、dmesg、find、whereis、echo、vi</p>
+</blockquote>
+<p>命令使用方式可见<a href="http://www.runoob.com/linux/linux-command-manual.html" target="_blank" rel="noopener">Linux 命令大全</a></p>
+<p><strong>添加内容</strong><br><code>tail</code>命令常与<code>watch命令同时使用</code></p>
 
       
     </div>
@@ -452,7 +490,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
       
         <div class="post-tags">
           
-            <a href="/tags/Hello/" rel="tag"><i class="fa fa-tag"></i> Hello</a>
+            <a href="/tags/CTF/" rel="tag"><i class="fa fa-tag"></i> CTF</a>
           
         </div>
       
@@ -465,15 +503,15 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/01/30/Java反编译测试/" rel="next" title="反编译测试">
+                <i class="fa fa-chevron-left"></i> 反编译测试
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/23/更新博客搭建/" rel="prev" title="更新博客搭建">
-                更新博客搭建 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -617,7 +655,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-sql宽字节注入"><span class="nav-number">1.</span> <span class="nav-text">1. sql宽字节注入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#url转码"><span class="nav-number">1.1.</span> <span class="nav-text">url转码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于约束的sql攻击"><span class="nav-number">1.2.</span> <span class="nav-text">基于约束的sql攻击</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-kali-持久加密USB安装"><span class="nav-number">2.</span> <span class="nav-text">2. kali 持久加密USB安装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-将镜像文件刻录到U盘，制作usb的live启动盘"><span class="nav-number">2.0.0.0.1.</span> <span class="nav-text">1. 将镜像文件刻录到U盘，制作usb的live启动盘</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-划分剩余分区，用于后续加密"><span class="nav-number">2.0.0.0.2.</span> <span class="nav-text">2. 划分剩余分区，用于后续加密</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-使用luks对分区进行加密"><span class="nav-number">2.0.0.0.3.</span> <span class="nav-text">3. 使用luks对分区进行加密</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#3-熟悉Linux环境"><span class="nav-number">3.</span> <span class="nav-text">3. 熟悉Linux环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-熟悉BASH命令"><span class="nav-number">4.</span> <span class="nav-text">4. 熟悉BASH命令</span></a></li></div>
             
 
           </div>

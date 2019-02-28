@@ -96,7 +96,7 @@
 <meta name="description" content="&amp;emsp;最近无趣，看了看某软件install时出现的accept协议，不同意不让安装那个。提到一句“不允许解码、逆向工程、反汇编或删减本软件至人们可感知的形式（除非相关适用法律允许这样做）”下面了解了解反编译的知识">
 <meta name="keywords" content="Decompile">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java反编译测试">
+<meta property="og:title" content="反编译测试">
 <meta property="og:url" content="http://yoursite.com/2019/01/30/Java反编译测试/index.html">
 <meta property="og:site_name" content="Just的博客">
 <meta property="og:description" content="&amp;emsp;最近无趣，看了看某软件install时出现的accept协议，不同意不让安装那个。提到一句“不允许解码、逆向工程、反汇编或删减本软件至人们可感知的形式（除非相关适用法律允许这样做）”下面了解了解反编译的知识">
@@ -108,9 +108,15 @@
 <meta property="og:image" content="https://i.imgur.com/VJeHc8B.png">
 <meta property="og:image" content="https://i.imgur.com/Cw23jNa.png">
 <meta property="og:image" content="https://i.imgur.com/IBrmJKZ.png">
-<meta property="og:updated_time" content="2019-02-13T15:10:02.448Z">
+<meta property="og:image" content="https://i.imgur.com/yk7cGWE.png">
+<meta property="og:image" content="https://i.imgur.com/CL8eqBw.png">
+<meta property="og:image" content="https://i.imgur.com/cHXdADq.png">
+<meta property="og:image" content="https://i.imgur.com/9SZ6zQj.png">
+<meta property="og:image" content="https://i.imgur.com/63rko2X.png">
+<meta property="og:image" content="https://i.imgur.com/BMvtGDR.png">
+<meta property="og:updated_time" content="2019-02-24T03:05:28.277Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java反编译测试">
+<meta name="twitter:title" content="反编译测试">
 <meta name="twitter:description" content="&amp;emsp;最近无趣，看了看某软件install时出现的accept协议，不同意不让安装那个。提到一句“不允许解码、逆向工程、反汇编或删减本软件至人们可感知的形式（除非相关适用法律允许这样做）”下面了解了解反编译的知识">
 <meta name="twitter:image" content="https://i.imgur.com/w0DeufY.png">
 
@@ -148,7 +154,7 @@
 
 
 
-  <title>Java反编译测试 | Just的博客</title>
+  <title>反编译测试 | Just的博客</title>
   
 
 
@@ -315,7 +321,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java反编译测试</h1>
+          <h1 class="post-title" itemprop="name headline">反编译测试</h1>
         
 
         <div class="post-meta">
@@ -364,7 +370,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
                 </span>
                 
                 <span title="Words count in article">
-                  705
+                  950
                 </span>
               
 
@@ -378,7 +384,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
                 </span>
                 
                 <span title="Reading time">
-                  2
+                  3
                 </span>
               
             </div>
@@ -417,7 +423,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
 <p>&emsp;  </p>
 <p>&emsp;  </p>
 <h2 id="jar文件转为exe文件"><a href="#jar文件转为exe文件" class="headerlink" title="jar文件转为exe文件"></a>jar文件转为exe文件</h2><blockquote>
-<p>&emsp;使用exe4j软件可以完成（下载界面介绍了解到install4j软件，记录下来以后可以尝试）<br>操作流程见<a href="#1">参考文档</a></p>
+<p>&emsp;使用exe4j软件可以完成（下载界面介绍了解到install4j软件，记录下来以后可以尝试），也可以使用<a href="http://www.jar2exe.com/" target="_blank" rel="noopener">Jar2Exe</a>应用程序。<br>&emsp;操作流程见<a href="#1">参考文档</a></p>
 </blockquote>
 <h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a><font size="5" color="red"><strong>Error</strong></font></h3><p>&emsp;</p>
 <font size="5">1.&emsp;</font><br>  <img src="https://i.imgur.com/SZDLovb.png" alt=""><br><br>- 这是由于从eclipse中Export时操作错误导致。出现所需要的类没有在exe文件中，原因有<br>1. Export时选择单个的主类文件，没有选择整个project导出，使用整个project导出则会将使用到的所有包都包含在内。<br>2. 导出时没有选择JAR file，而是选择Runnable JAR file。<br><font size="5">2. &emsp;</font><br>  <img src="https://i.imgur.com/VJeHc8B.png" alt=""><br>- 由于使用exe4j时操作失误导致。本机JVM为64bit，但打包成exe过程中选择的时32bit<br>  <img src="https://i.imgur.com/Cw23jNa.png" alt=""><br><br><font size="4"><strong>注意</strong></font><br>  填写.jar包或jre路径时，使用<font color="red">relative path</font>
@@ -436,8 +442,28 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
 <p>可以反编译单个.class文件，右侧显示代码。   </p>
 </blockquote>
 <p><img src="https://i.imgur.com/IBrmJKZ.png" alt=""></p>
-<p>参考文档：  </p>
+<h1 id="Unity3D反编译"><a href="#Unity3D反编译" class="headerlink" title="Unity3D反编译"></a>Unity3D反编译</h1><h2 id="Builds-balls-exe"><a href="#Builds-balls-exe" class="headerlink" title="Builds\balls.exe"></a>Builds\balls.exe</h2><blockquote>
+<p>从同学那里捣鼓过来的，就来当个人的实验样本吧  </p>
+</blockquote>
+<p><img src="https://i.imgur.com/yk7cGWE.png" alt=""> <img src="https://i.imgur.com/CL8eqBw.png" alt=""></p>
+<p>反编译出来的文件放到RE文件夹里</p>
+<h2 id="使用Reflector"><a href="#使用Reflector" class="headerlink" title="使用Reflector"></a>使用Reflector</h2><blockquote>
+<p>这个软件是.NET的，但是可以用到Unity的C#代码上，需要用到插件Reflector.FileDisassembler.dll下载地址：<a href="http://www.xdowns.com/soft/184/dll/2014/Soft_130597.html" target="_blank" rel="noopener">http://www.xdowns.com/soft/184/dll/2014/Soft_130597.html</a></p>
+</blockquote>
 <ul>
+<li><p>把下载好的<code>Reflector.FileDisassembler.dll</code>文件放到软件根目录下的Addins文件夹中（哪里都可以）</p>
+</li>
+<li><p>添加插件<br><img src="https://i.imgur.com/cHXdADq.png" alt=""><br><img src="https://i.imgur.com/9SZ6zQj.png" alt=""><br>添加后关闭窗口即可</p>
+</li>
+</ul>
+<p>上述准备工作完成，可以进行反编译测试了</p>
+<ul>
+<li>Ctrl+O,打开文件,选择Unity程序对应的应用程序扩展，扩展名为.dll那些<br>左侧有分析好的，代码部分在{}花括号里，将花括号里的文件反编译出来。</li>
+</ul>
+<p><img src="https://i.imgur.com/63rko2X.png" alt=""></p>
+<p>完成之后<br><img src="https://i.imgur.com/BMvtGDR.png" alt="">  </p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>在进行下一次反编译前，先Refresh软件，否则 file disassembler不可用  </p>
+<h1 id="参考文档："><a href="#参考文档：" class="headerlink" title="参考文档："></a>参考文档：</h1><ul>
 <li><p><span id="1"><a href="https://blog.csdn.net/qq_21808961/article/details/81185934" target="_blank" rel="noopener">eclipse 导出可运行jar包时三种Library handling的区别</a></span></p>
 </li>
 <li><p><a href="https://www.cnblogs.com/jepson6669/p/9211208.html" target="_blank" rel="noopener">exe4j安装及注册</a></p>
@@ -447,6 +473,8 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
 <li><p><a href="https://blog.csdn.net/chenchunlin526/article/details/78259682" target="_blank" rel="noopener">Java反编译工具使用对比，最好用的Java反编译工具 — JD-GUI、XJad</a></p>
 </li>
 <li><p><a href="https://blog.csdn.net/qq_26458903/article/details/79974775" target="_blank" rel="noopener">几种java反编译软件的安装以及使用总结</a></p>
+</li>
+<li><p><a href="https://blog.csdn.net/qq_15267341/article/details/51749986" target="_blank" rel="noopener">Unity3d 各种反编译</a></p>
 </li>
 </ul>
 
@@ -501,6 +529,10 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/18/CTF笔记/" rel="prev" title="edu.aqniu笔记">
+                edu.aqniu笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -579,7 +611,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -601,7 +633,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -644,7 +676,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java反编译"><span class="nav-number">1.</span> <span class="nav-text">Java反编译</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java导出JAR-file"><span class="nav-number">1.1.</span> <span class="nav-text">Java导出JAR file</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jar文件转为exe文件"><span class="nav-number">1.2.</span> <span class="nav-text">jar文件转为exe文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Error"><span class="nav-number">1.2.1.</span> <span class="nav-text">Error</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#exe文件反编译重点过程"><span class="nav-number">1.3.</span> <span class="nav-text">exe文件反编译重点过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JD-GUI"><span class="nav-number">1.3.1.</span> <span class="nav-text">JD-GUI</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java反编译"><span class="nav-number">1.</span> <span class="nav-text">Java反编译</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java导出JAR-file"><span class="nav-number">1.1.</span> <span class="nav-text">Java导出JAR file</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jar文件转为exe文件"><span class="nav-number">1.2.</span> <span class="nav-text">jar文件转为exe文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Error"><span class="nav-number">1.2.1.</span> <span class="nav-text">Error</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#exe文件反编译重点过程"><span class="nav-number">1.3.</span> <span class="nav-text">exe文件反编译重点过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JD-GUI"><span class="nav-number">1.3.1.</span> <span class="nav-text">JD-GUI</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Unity3D反编译"><span class="nav-number">2.</span> <span class="nav-text">Unity3D反编译</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Builds-balls-exe"><span class="nav-number">2.1.</span> <span class="nav-text">Builds\balls.exe</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Reflector"><span class="nav-number">2.2.</span> <span class="nav-text">使用Reflector</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">2.3.</span> <span class="nav-text">注意</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文档："><span class="nav-number">3.</span> <span class="nav-text">参考文档：</span></a></li></ol></div>
             
 
           </div>
@@ -676,7 +708,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Site words total count">5.3k</span>
+    <span title="Site words total count">5.9k</span>
   
 </div>
 
