@@ -349,7 +349,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
                 </span>
                 
                 <span title="Words count in article">
-                  549
+                  559
                 </span>
               
 
@@ -385,77 +385,16 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
 
       
         
-          
-            <a id="more"></a>
-<h1 id="1-sql宽字节注入"><a href="#1-sql宽字节注入" class="headerlink" title="1. sql宽字节注入"></a>1. sql宽字节注入</h1><h2 id="url转码"><a href="#url转码" class="headerlink" title="url转码"></a>url转码</h2><table>
-<thead>
-<tr>
-<th>空格</th>
-<th>%20</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>‘</td>
-<td>%27</td>
-</tr>
-<tr>
-<td>#</td>
-<td>%23</td>
-</tr>
-<tr>
-<td>\</td>
-<td>%5C</td>
-</tr>
-</tbody>
-</table>
-<p>利用MySQL的一个特性，MySQL使用GBK编码的时候，会认为两个字符时一个汉字（前一个ascii码要大于128，才到汉字的范围）</p>
-<p><strong>&emsp;’     &emsp;-&gt;     &emsp;&emsp;\’&emsp;&emsp;        -&gt;      %5C%27</strong><br><strong>%df ‘    -&gt; &emsp;%df\’ &emsp;    -&gt;    <font color="red">%df%5C</font>%27</strong><br>此处的单引号变为%27逃逸</p>
-<h2 id="基于约束的sql攻击"><a href="#基于约束的sql攻击" class="headerlink" title="基于约束的sql攻击"></a>基于约束的sql攻击</h2><h1 id="2-kali-持久加密USB安装"><a href="#2-kali-持久加密USB安装" class="headerlink" title="2. kali 持久加密USB安装"></a>2. kali 持久加密USB安装</h1><ol>
-<li>将kali镜像iso文件复制到虚拟机当中（通过共享文件夹从物理主机传到虚拟机）</li>
-<li>插入U盘<blockquote>
-<p>命令    <code>dmesg</code> 显示U盘类型【sdb】系统写入的日志</p>
+          <blockquote>
+<p>安全牛的课程演示记录</p>
 </blockquote>
-</li>
-</ol>
-<h5 id="1-将镜像文件刻录到U盘，制作usb的live启动盘"><a href="#1-将镜像文件刻录到U盘，制作usb的live启动盘" class="headerlink" title="1. 将镜像文件刻录到U盘，制作usb的live启动盘"></a>1. 将镜像文件刻录到U盘，制作usb的live启动盘</h5><h5 id="2-划分剩余分区，用于后续加密"><a href="#2-划分剩余分区，用于后续加密" class="headerlink" title="2. 划分剩余分区，用于后续加密"></a>2. 划分剩余分区，用于后续加密</h5><ul>
-<li><code>dd if=kali-linux-...-amd64.iso of=/dev/sdb(此处的sdb是根据所插入的存储设备的类型） bs=1M</code></li>
-<li><code>parted</code>命令行磁盘分区</li>
-<li><code>print devices</code>显示现在挂载的硬盘</li>
-<li><code>select /dev/sdb</code>选中磁盘在此操作</li>
-<li><img src="https://i.imgur.com/dbWqvwN.png" alt=""></li>
-<li><code>mkpart primary ** **</code>手动进行分区</li>
-</ul>
-<h5 id="3-使用luks对分区进行加密"><a href="#3-使用luks对分区进行加密" class="headerlink" title="3. 使用luks对分区进行加密"></a>3. 使用luks对分区进行加密</h5><blockquote>
-<p>luks加密分前端和后端加密</p>
-</blockquote>
-<ul>
-<li><code>cryptsetup --verbose --verify-passphrase luksFormat /dev/sdb3(u盘中的第3分区）</code></li>
-<li><code>cryptsetup luksOpen /dev/sdb3 usb(需要给一个挂载的名称，会在/dev/mapper/usb生成文件)</code>打开加密的分区来进行写入</li>
-<li><code>ls /dev/mapper/usb</code></li>
-<li><code>mkfs ext3(ext4) /dev/mapper/usb</code>格式化磁盘分区</li>
-<li><code>e2label /dev/mapper/usb persistence</code>设置卷标（必须用persistence）</li>
-<li><code>mkdir /mnt/usb/</code>新创建一个目录</li>
-<li><code>mount /dev/mapper/usb /mnt/usb</code>相当于连接目录</li>
-<li><code>echo &quot;/ union&quot; &gt; /mnt/usb/persistence.conf</code></li>
-<li><code>umount /dev/mapper/usb</code>将挂载的文件卸载掉</li>
-<li><code>cryptsetup luksClose /dev/mapper/usb</code>完成持久加密的usb</li>
-</ul>
-<h1 id="3-熟悉Linux环境"><a href="#3-熟悉Linux环境" class="headerlink" title="3. 熟悉Linux环境"></a>3. 熟悉Linux环境</h1><ul>
-<li><code>gnome-tweak-tool</code>字体调整，在terminal界面命令行</li>
-<li><code>clear</code>将命令行界面清空</li>
-<li><code>apt-get install netspeed</code>网络流量监视，1.安装包……2.添加到工具栏，点alt键在工具栏一行点右键，添加到面板</li>
-</ul>
-<blockquote>
-<p><code>apt-get</code>命令 安装官方软件常用命令</p>
-</blockquote>
-<h1 id="4-熟悉BASH命令"><a href="#4-熟悉BASH命令" class="headerlink" title="4. 熟悉BASH命令"></a>4. 熟悉BASH命令</h1><blockquote>
-<p>ls、cd、pwd、cat、more、tail、cp、rm、top、ps、grep、ifconfig、netstat、awk、sort、route、mount、dmesg、find、whereis、echo、vi</p>
-</blockquote>
-<p>命令使用方式可见<a href="http://www.runoob.com/linux/linux-command-manual.html" target="_blank" rel="noopener">Linux 命令大全</a></p>
-<p><strong>添加内容</strong><br><code>tail</code>命令常与<code>watch命令同时使用</code></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/02/18/CTF笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -941,7 +880,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
                 </span>
                 
                 <span title="Words count in article">
-                  1k
+                  1.1k
                 </span>
               
 
@@ -1379,6 +1318,170 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/21/hexo+git博客搭建/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="www路">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Just的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/21/hexo+git博客搭建/" itemprop="url">hexo+git博客搭建</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-21T09:16:24+08:00">
+                2018-12-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                  <span class="post-meta-divider">|</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                <span title="Words count in article">
+                  803
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                <span title="Reading time">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <blockquote>
+<p>欣赏了一些其他人的博客，并不是简单的仓库，遂由网上查找关于hexo搭建github博客的文档</p>
+</blockquote>
+<ul>
+<li>Hexo官方：<a href="https://hexo.io/" target="_blank" rel="noopener">https://hexo.io/</a> </li>
+<li>Hexo官方(中文)：<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a> </li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/21/hexo+git博客搭建/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <!--文章末尾添加问候语-->
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/15/hello-world/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1594,7 +1697,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1675,7 +1778,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Site words total count">5.9k</span>
+    <span title="Site words total count">6.7k</span>
   
 </div>
 
