@@ -109,7 +109,7 @@
 <meta property="og:image" content="https://i.imgur.com/YFx2KcB.png">
 <meta property="og:image" content="https://i.imgur.com/hT7FsVk.png">
 <meta property="og:image" content="https://i.imgur.com/4t4Jbbt.png">
-<meta property="og:updated_time" content="2019-03-08T15:11:20.130Z">
+<meta property="og:updated_time" content="2019-03-10T03:57:52.019Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git学习使用">
 <meta name="twitter:description" content="Github学习&amp;emsp;有时从其他博客上学到一些零散的知识，这里学一学，那里找一找，突然又提出一个问题，但没有地方做做笔记就必定会有些遗忘，特意将这些错误及其解决方案记录下来，以便日后查证之用，算是为了之后提出同样的问题时，会想着“ 我以前是不是说过这个问题|这个问题我不是解决了吗？”之类的。好记性不如烂笔头^,^">
@@ -365,7 +365,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
                 </span>
                 
                 <span title="Words count in article">
-                  1.2k
+                  1.5k
                 </span>
               
 
@@ -379,7 +379,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
                 </span>
                 
                 <span title="Reading time">
-                  4
+                  5
                 </span>
               
             </div>
@@ -449,7 +449,24 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
 <li>查看分支中内容提交的状态<br>git status</li>
 <li>最后一步，我们把修改的内容提交到主分支上<br>git push origin master<br>如果你感觉合并后的内容有问题，你可以通过撤销合并恢复到以前状态。<br>　　git reset –hard HEAD<br>代码已经提交，撤销的方法是<br>　　git reset –hard ORIG_HEAD</li>
 </ol>
-<h3 id="新的分支并推送到远程仓库"><a href="#新的分支并推送到远程仓库" class="headerlink" title="新的分支并推送到远程仓库"></a>新的分支并推送到远程仓库</h3><h2 id="删除远程仓库文件"><a href="#删除远程仓库文件" class="headerlink" title="删除远程仓库文件"></a>删除远程仓库文件</h2><blockquote>
+<h3 id="远程仓库与本地间——新分支"><a href="#远程仓库与本地间——新分支" class="headerlink" title="远程仓库与本地间——新分支"></a>远程仓库与本地间——新分支</h3><blockquote>
+<p>创建分支上面已经说了，后续就是推到远程仓库</p>
+</blockquote>
+<p><code>git push --set-upstream origin 分支名</code></p>
+<blockquote>
+<p>拉取一个本地工作区/本地仓库不存在的分支</p>
+</blockquote>
+<p><code>git checkout -b 本地分支名 origin/远程分支名</code>//这个将会自动创建一个新的本地分支，并与指定的远程分支关联起来。如果出现错误<em>Cannot update paths and switch to branch ‘dev2’ at the same time.</em>表示拉取不成功，先进行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch</span><br></pre></td></tr></table></figure>
+<p>再执行<code>git checkout -b 本地分支名 origin/远程分支名</code></p>
+<blockquote>
+<p>删除远程分支</p>
+</blockquote>
+<p>（1）使用命令<code>git branch -a</code> 查看所有分支，带有remote的为远程仓库的分支，其他为本地分支</p>
+<p>（2）使用命令 <code>git push origin --delete newbranch</code>   可以删除远程分支newbranch</p>
+<p>（3）使用命令<code>git branch -d newbranch</code> 可以删除本地分支</p>
+<p><strong>注意</strong>：删除时无法删除当前所在分支</p>
+<h2 id="删除远程仓库文件"><a href="#删除远程仓库文件" class="headerlink" title="删除远程仓库文件"></a>删除远程仓库文件</h2><blockquote>
 <p>&emsp;有时我们会想将远程仓库中仅仅某个文件删除掉，保留其他文件，为了不影响其他开发者使用git上的错误文件，我们需要删除已经传到远程仓库中的错误文件</p>
 </blockquote>
 <ol>
@@ -515,6 +532,10 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/08/imagetest/" rel="prev" title="imagetest">
+                imagetest <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -593,7 +614,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -658,7 +679,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github学习"><span class="nav-number">1.</span> <span class="nav-text">Github学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#更新Github远程仓库内容"><span class="nav-number">1.1.</span> <span class="nav-text">更新Github远程仓库内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多人合作开发项目基本问题"><span class="nav-number">1.1.1.</span> <span class="nav-text">多人合作开发项目基本问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-使用强制push方法"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1. 使用强制push方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-push前先将远程repository修改pull下来"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">2. push前先将远程repository修改pull下来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-创建新分支，放到新分支中"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">3. 创建新分支，放到新分支中</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#新的分支并推送到远程仓库"><span class="nav-number">1.1.3.</span> <span class="nav-text">新的分支并推送到远程仓库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除远程仓库文件"><span class="nav-number">1.2.</span> <span class="nav-text">删除远程仓库文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-pull拉取成功却未更新"><span class="nav-number">1.3.</span> <span class="nav-text">git pull拉取成功却未更新</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#推荐Git学习文档"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">推荐Git学习文档</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github学习"><span class="nav-number">1.</span> <span class="nav-text">Github学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#更新Github远程仓库内容"><span class="nav-number">1.1.</span> <span class="nav-text">更新Github远程仓库内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多人合作开发项目基本问题"><span class="nav-number">1.1.1.</span> <span class="nav-text">多人合作开发项目基本问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-使用强制push方法"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">1. 使用强制push方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-push前先将远程repository修改pull下来"><span class="nav-number">1.1.2.2.</span> <span class="nav-text">2. push前先将远程repository修改pull下来</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-创建新分支，放到新分支中"><span class="nav-number">1.1.2.3.</span> <span class="nav-text">3. 创建新分支，放到新分支中</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程仓库与本地间——新分支"><span class="nav-number">1.1.3.</span> <span class="nav-text">远程仓库与本地间——新分支</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除远程仓库文件"><span class="nav-number">1.2.</span> <span class="nav-text">删除远程仓库文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-pull拉取成功却未更新"><span class="nav-number">1.3.</span> <span class="nav-text">git pull拉取成功却未更新</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#推荐Git学习文档"><span class="nav-number">1.3.0.1.</span> <span class="nav-text">推荐Git学习文档</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -690,7 +711,7 @@ zIndex: 背景的z-index属性，css属性用于控制所在层的位置, 默认
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="Site words total count">7.1k</span>
+    <span title="Site words total count">8.6k</span>
   
 </div>
 
